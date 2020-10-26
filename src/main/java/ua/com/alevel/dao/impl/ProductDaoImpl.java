@@ -28,6 +28,7 @@ public class ProductDaoImpl implements ProductDao {
             ps.setString(2, product.getName());
             ps.setInt(3, product.getPrice());
             ps.setString(4, product.getDescription());
+            ps.executeQuery();
             connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
